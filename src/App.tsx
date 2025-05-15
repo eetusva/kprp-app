@@ -47,7 +47,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/kprp-app/"> {/* Updated basename to match GitHub Pages repo name */}
+    <Router basename="/kprp-app/"> {/* Tämä on avainasemassa React Routerille */}
       <AuthProvider>
         <MessageProvider>
           <AppContent />

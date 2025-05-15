@@ -2,12 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    {/* Jos vite.svg on public-kansiossa, tämä polku on oikein. 
+        Vite build -prosessin ja base-asetuksen pitäisi muuttaa tämä muotoon /kprp-app/vite.svg
+        tuotantoversiossa. */}
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Discord Message Viewer</title>
   </head>
   <body>
     <div id="root"></div>
+    {/* Tämä on Viten kehitysaikainen sisääntulopiste.
+        Vite build -prosessin ja base-asetuksen pitäisi korvata tämä
+        tuotantoversiossa polulla /kprp-app/assets/index-XXXX.js */}
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
