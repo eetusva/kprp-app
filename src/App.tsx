@@ -5,14 +5,14 @@ import { MessageProvider } from './contexts/MessageContext';
 import LoginPage from './pages/LoginPage';
 import AdminPage from './pages/AdminPage';
 import './index.css';
-import { useAuth } from './contexts/AuthContext'; // Import useAuth
+import { useAuth } from './contexts/AuthContext';
 
 // ProtectedRoute component
 const ProtectedRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
   const { isAuthenticated, isLoading } = useAuth();
 
   if (isLoading) {
-    return <div className="flex justify-center items-center h-screen"><p className="text-white">Ladataan...</p></div>; // Or a spinner component
+    return <div className="flex justify-center items-center h-screen"><p className="text-white">Ladataan...</p></div>;
   }
 
   if (!isAuthenticated) {
@@ -24,7 +24,6 @@ const ProtectedRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
 
 
 function AppContent() {
-  // useAuth can be called here because AppContent is a child of AuthProvider
   const { isLoading } = useAuth();
 
   if (isLoading) {
@@ -49,7 +48,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/modern-message-viewer/"> {/* Ensure basename matches vite.config.ts */}
+    <Router basename="/kprp-app/"> {/* Updated basename */}
       <AuthProvider>
         <MessageProvider>
           <AppContent />
