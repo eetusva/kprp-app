@@ -7,7 +7,6 @@ import AdminPage from './pages/AdminPage';
 import './index.css';
 import { useAuth } from './contexts/AuthContext';
 
-// ProtectedRoute component
 const ProtectedRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -48,7 +47,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/kprp-app/"> {/* Updated basename */}
+    <Router basename="/kprp-app/"> {/* Updated basename to match GitHub Pages repo name */}
       <AuthProvider>
         <MessageProvider>
           <AppContent />
